@@ -1,8 +1,21 @@
-node
-{   Stage('git part')
-            { git 'https://github.com/simirankaur14/NAVI.git'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
-    Stage('maven part')
-            { sh 'mvn package'
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
