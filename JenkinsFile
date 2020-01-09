@@ -1,8 +1,0 @@
-node
-{   Stage('git part')
-            { git 'https://github.com/simirankaur14/NAVI.git'
-            }
-    Stage('maven part')
-            { sh 'mvn package'
-            }
-}
